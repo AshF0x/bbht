@@ -19,7 +19,7 @@ sudo apt-get install -y rename
 sudo apt-get install -y xargs
 
 echo "installing bash_profile aliases from recon_profile"
-git clone https://github.com/nahamsec/recon_profile.git
+git clone https://github.com/ashf0x/recon_profile.git
 cd recon_profile
 cat bash_profile >> ~/.bash_profile
 source ~/.bash_profile
@@ -185,7 +185,9 @@ cat dns-Jhaddix.txt | head -n -14 > clean-jhaddix-dns.txt
 cd ~/tools/
 echo "done"
 
-
+echo "downloading FFUF"
+go get github.com/ffuf/ffuf
+echo "done"
 
 echo -e "\n\n\n\n\n\n\n\n\n\n\nDone! All tools are set up in ~/tools"
 ls -la
